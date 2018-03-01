@@ -1,10 +1,10 @@
 Search = React.createClass ({
                   
-        getInitialState() {
-                        return {
-                            searchingText: ''
-                        };
-                    },
+        getInitialState: function() {
+            return {
+                searchingText: ''
+            };
+        },
     
         handleChange: function(event) {
             var searchingText = event.target.value;
@@ -22,16 +22,19 @@ Search = React.createClass ({
         },
             
         render: function() {
-            var styles = {fontSize: '1.5', width: '90%', maxWidth: '350px'};
-        }
+            var styles = {
+                fontSize: '1.5em',
+                width: '90%',
+                maxWidth: '350px'
+            };
          
         return <input
-             type="text"
+             type='text'
              onChange={this.handleChange}
              onKeyUp={this.handleKeyUp}
-             placeholder="Type your searching phrase"
+             placeholder='Type your searching phrase'
              style={styles}
              value={this.state.searchTerm}
-            />    
-    }
+            />   
+        }
 });
